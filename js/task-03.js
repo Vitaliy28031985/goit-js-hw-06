@@ -17,7 +17,7 @@ const createElements = list => {
   const { url, alt, } = list
 return `<li class="list__item">
 <p class="list__item--text">${alt}</p>
-<img src='${url} alt='${alt}' class="img__nature">
+<img src="${url}" alt="${alt}" class="img__nature">
 </img>
 </li>`;
 };

@@ -13,25 +13,26 @@ const onCreateCounterInValueInput = (value) => {
 };
 
 const onCreateBoxes = () => {
-  let startBoxSizing = 20;
-  let allDivsEl = [];
-  for (let i = 1; i <= valueToInput.getAttribute('counter'); i += 1) {
-    
-    startBoxSizing += 10;
-    const createdDiv = document.createElement('div');
-   
-    createdDiv.classList.add('box-item')
-    createdDiv.style.width = `${startBoxSizing}px`
-    createdDiv.style.height = `${startBoxSizing}px`
-    createdDiv.style.border = '2px solid black'
-    createdDiv.style.backgroundColor = `${getRandomHexColor()}`
-    createdDiv.style.marginTop = '10px'
-    createdDiv.style.verticalAlign = 'middle'
+ 
+ let startBoxSizing = 20;
+ let allDivsEl = [];
+ for (let i = 1; i <= valueToInput.getAttribute('counter'); i += 1) {
+  startBoxSizing += 10;
+  const createdDiv = document.createElement('div');
+ 
+  createdDiv.classList.add('box-item')
+  createdDiv.style.width = `${startBoxSizing}px`
+  createdDiv.style.height = `${startBoxSizing}px`
+  createdDiv.style.border = '2px solid black'
+  createdDiv.style.backgroundColor = `${getRandomHexColor()}`
+  createdDiv.style.marginTop = '10px'
+  createdDiv.style.verticalAlign = 'middle'
 
-  allDivsEl.push(createdDiv);
-  }
-  divsContainer.append(...allDivsEl)
+allDivsEl.push(createdDiv);
+}
+divsContainer.append(...allDivsEl)
 };
+  
 
 const onDestroyBtn = () => {
   divsContainer.innerHTML = '';
