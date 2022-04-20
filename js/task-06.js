@@ -10,12 +10,12 @@ refs.input.addEventListener('blur', print);
 
 function print (event) {
   
-   if (event.currentTarget.value.length <= refs.check) {
-      refs.input.classList.add('valid');
-      refs.input.classList.remove('invalid');  
+   if (event.currentTarget.value.length < refs.check || refs.check < event.currentTarget.value.length) {
+      refs.input.classList.remove('valid');
+      refs.input.classList.add('invalid');  
    }
    else {
-      refs.input.classList.add('invalid');
-      refs.input.classList.remove('valid'); 
+      refs.input.classList.remove('invalid');
+      refs.input.classList.add('valid'); 
    }
   }

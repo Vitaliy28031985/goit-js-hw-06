@@ -16,10 +16,11 @@ const onCreateBoxes = () => {
  
  let startBoxSizing = 20;
  let allDivsEl = [];
+
  for (let i = 1; i <= valueToInput.getAttribute('counter'); i += 1) {
   startBoxSizing += 10;
+
   const createdDiv = document.createElement('div');
- 
   createdDiv.classList.add('box-item')
   createdDiv.style.width = `${startBoxSizing}px`
   createdDiv.style.height = `${startBoxSizing}px`
@@ -29,10 +30,12 @@ const onCreateBoxes = () => {
   createdDiv.style.verticalAlign = 'middle'
 
 allDivsEl.push(createdDiv);
+
 }
+
 divsContainer.append(...allDivsEl)
+
 };
-  
 
 const onDestroyBtn = () => {
   divsContainer.innerHTML = '';
